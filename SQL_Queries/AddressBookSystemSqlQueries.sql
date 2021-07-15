@@ -1,5 +1,5 @@
 # UC1
-create database addressbook_service_db;
+create database addressbook_service_db;  # Creating database
 show databases;
 
 # UC2
@@ -15,4 +15,18 @@ create table AddressBook (
      Email varchar(50) not null
      );
 show tables;
-describe addressbook;     
+describe addressbook;  
+
+# UC3
+insert into addressbook ( 
+	FirstName, LastName, Address, City,
+    State, Zip, PhoneNumber, Email 
+    )
+	values
+    ( 'Shubham', 'Abc', 'House No 1 Abc Lane', 'Pune',
+     'Maharashtra', '411041', '9876543210', 'shubh@gmail.com' ),
+	( 'Abhishek', 'Xyz', 'House No 101 Qwe Appartment', 'Mumbai',
+	 'Maharashtra', '400002', '7898676767', 'abhi@gmail.com' ),
+    ( 'Omkar', 'Pqr', 'R.No 505 Ratnagiri Soc.', 'Ranchi',
+     'Jharkhand', '2001243', '7678767890', 'om@gmail.com' );
+ select * from addressbook;    
