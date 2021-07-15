@@ -36,4 +36,9 @@ select * from addressbook;
 update addressbook 
 	set LastName = 'Singh', Zip = '200123', Email = 'omkar@gmail.com' 
 	where FirstName = 'Omkar';
-select * from addressbook;    
+select * from addressbook; 
+
+# UC5
+select * from addressbook;
+delete from addressbook where FirstName = 'Akshay';
+select * from addressbook;   
