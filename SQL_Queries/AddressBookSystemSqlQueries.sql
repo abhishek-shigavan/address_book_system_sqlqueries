@@ -49,4 +49,8 @@ select * from addressbook where State = 'Maharashtra';
 
 # UC7
 select count(City) from addressbook;
-select count(State) from addressbook;   
+select count(State) from addressbook;
+
+# UC8
+select * from addressbook;
+select * from addressbook where City = 'Pune' order by FirstName;   
