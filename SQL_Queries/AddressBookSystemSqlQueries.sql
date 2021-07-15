@@ -41,4 +41,8 @@ select * from addressbook;
 # UC5
 select * from addressbook;
 delete from addressbook where FirstName = 'Akshay';
-select * from addressbook;   
+select * from addressbook;
+
+#UC6
+select * from addressbook where City = 'Ranchi';
+select * from addressbook where State = 'Maharashtra';   
