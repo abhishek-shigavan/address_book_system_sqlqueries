@@ -43,6 +43,10 @@ select * from addressbook;
 delete from addressbook where FirstName = 'Akshay';
 select * from addressbook;
 
-#UC6
+# UC6
 select * from addressbook where City = 'Ranchi';
-select * from addressbook where State = 'Maharashtra';   
+select * from addressbook where State = 'Maharashtra';
+
+# UC7
+select count(City) from addressbook;
+select count(State) from addressbook;   
