@@ -20,13 +20,20 @@ describe addressbook;
 # UC3
 insert into addressbook ( 
 	FirstName, LastName, Address, City,
-    State, Zip, PhoneNumber, Email 
-    )
+    	State, Zip, PhoneNumber, Email 
+    	)
 	values
-    ( 'Shubham', 'Abc', 'House No 1 Abc Lane', 'Pune',
-     'Maharashtra', '411041', '9876543210', 'shubh@gmail.com' ),
+    	( 'Shubham', 'Abc', 'House No 1 Abc Lane', 'Pune',
+     	  'Maharashtra', '411041', '9876543210', 'shubh@gmail.com' ),
 	( 'Abhishek', 'Xyz', 'House No 101 Qwe Appartment', 'Mumbai',
-	 'Maharashtra', '400002', '7898676767', 'abhi@gmail.com' ),
-    ( 'Omkar', 'Pqr', 'R.No 505 Ratnagiri Soc.', 'Ranchi',
-     'Jharkhand', '2001243', '7678767890', 'om@gmail.com' );
- select * from addressbook;    
+	  'Maharashtra', '400002', '7898676767', 'abhi@gmail.com' ),
+    	( 'Omkar', 'Pqr', 'R.No 505 Ratnagiri Soc.', 'Ranchi',
+          'Jharkhand', '2001243', '7678767890', 'om@gmail.com' );
+select * from addressbook;
+
+# UC4
+select * from addressbook;
+update addressbook 
+	set LastName = 'Singh', Zip = '200123', Email = 'omkar@gmail.com' 
+	where FirstName = 'Omkar';
+select * from addressbook;    
