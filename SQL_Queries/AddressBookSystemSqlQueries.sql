@@ -57,4 +57,17 @@ select * from addressbook where City = 'Pune' order by FirstName;
 
 # UC9
 alter table addressbook add AddressBookName varchar(40) not null default 'N/A' first;
-alter table addressbook add ContactType varchar(40) default 'N/A' after AddressBookName;    
+alter table addressbook add ContactType varchar(40) default 'N/A' after AddressBookName; 
+
+# UC10
+#setting values of AddressBookName & ContactType column
+update addressbook set AddressBookName = 'Favourites', ContactType = 'Friend' where FirstName = 'Shubham';
+update addressbook set AddressBookName = 'Favourites', ContactType = 'Family' where FirstName = 'Abhishek';
+update addressbook set AddressBookName = 'Favourites', ContactType = 'Family' where FirstName = 'Omkar';
+update addressbook set AddressBookName = 'Important', ContactType = 'Profession' where FirstName = 'Bala';
+update addressbook set AddressBookName = 'Important', ContactType = 'Profession' where FirstName = 'Teja';
+
+#getting count of each ContactType
+select count(ContactType) from addressbook where ContactType = 'Family';
+select count(ContactType) from addressbook where ContactType = 'Friend';
+select count(ContactType) from addressbook where ContactType = 'Profession';   
