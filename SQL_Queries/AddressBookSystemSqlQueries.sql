@@ -53,4 +53,8 @@ select count(State) from addressbook;
 
 # UC8
 select * from addressbook;
-select * from addressbook where City = 'Pune' order by FirstName;   
+select * from addressbook where City = 'Pune' order by FirstName;
+
+# UC9
+alter table addressbook add AddressBookName varchar(40) not null default 'N/A' first;
+alter table addressbook add ContactType varchar(40) default 'N/A' after AddressBookName;    
