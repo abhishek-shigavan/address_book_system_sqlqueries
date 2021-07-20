@@ -71,3 +71,12 @@ update addressbook set AddressBookName = 'Important', ContactType = 'Profession'
 select count(ContactType) from addressbook where ContactType = 'Family';
 select count(ContactType) from addressbook where ContactType = 'Friend';
 select count(ContactType) from addressbook where ContactType = 'Profession';
+
+# UC11
+insert into addressbook (AddressBookName, ContactType, FirstName, LastName, 	#inserting contact with 	
+			 Address, City, State, Zip, PhoneNumber, Email)		#contactType as family & friend
+            values
+            ('Office', 'Friend', 'Sam', 'Raut', 'Dadar', 'Mumbai', 'Maharashtra',
+			  '400002', '8789987809', 'samraut@bl.com'),
+            ('Office', 'Family', 'Sam', 'Raut', 'Dadar', 'Mumbai', 'Maharashtra',
+			  '400002', '8789987809', 'samraut@bl.com');  
